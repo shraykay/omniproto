@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/davecgh/go-spew/spew"
 	"github.com/spf13/viper"
 )
 
@@ -54,5 +55,6 @@ func ReadConfig() (*Config, error) {
 		return nil, err
 	}
 
+	spew.Dump(config)
 	return &config, nil
 }
